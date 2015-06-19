@@ -1,4 +1,5 @@
-## STAN Runtime Test: Hierarchical Gaussian Process Fitting and Posterior Realization in 2D
+## STAN Runtime Test: Hierarchical Gaussian Process Hyperparameter
+   Fitting and Posterior Realization in 2D
 
 <p align="center">
   <img src="static/space.gif">
@@ -19,7 +20,15 @@
 3.    `ANALYTIC`: Derive posterior preditive distribution for unknown responses analytically. (STAN manual pp. 136-7 -- `y2 ~ multi_normal(K_transpose_div_Sigma * y1, Omega - K_transpose_div_Sigma * K)`). Expected to finish 2nd or 2rd. 
 4.    `ANALYTIC_CHOLESKY`: Derive posterior predictive distribution for unknonwn responses analytically, with "cholesky speedup." (STAN Manual p. 137 -- `y2 ~ multi_normal_cholesky(K_transpose_div_Sigma * y1, cholesky_decompose(Omega - K_transpose_div_Sigma * K))`). Expected to finish 1st.
 
+### This Repository
+
+Models live in folders named by implmementation type. Python wrappers used to produce each result are provided in each folder, along with STAN logs.
+
 ### Results
+
+All results computed using `pystan` on edison at NERSC. Each
+implementation was run with 4 chains and 2000 iterations per chain
+(1000 warmup, 1000 sampling).
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -27,15 +36,9 @@
 <colgroup>
 <col  class="left" />
 
-<col  class="right" />
+<col  class="left" />
 
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="right" />
+<col  class="left" />
 
 <col  class="right" />
 
@@ -43,59 +46,44 @@
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="left">APPROACH</th>
-<th scope="col" class="right">NUM CHAINS</th>
-<th scope="col" class="right">NUM ITER (WARMUP)</th>
-<th scope="col" class="right">NUM ITER (SAMPLING)</th>
-<th scope="col" class="right">NCORE</th>
-<th scope="col" class="right">MEAN ITER</th>
-<th scope="col" class="right">STD ITER</th>
+<th scope="col" class="left">IMPLEMENTATION</th>
 <th scope="col" class="left">EXPECTATION</th>
+<th scope="col" class="left">RESULT</th>
+<th scope="col" class="right">ITER REACHED (CHAIN-MEAN)</th>
+<th scope="col" class="left">TERMINATED?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="left">JOINT</td>
-<td class="right">4</td>
-<td class="right">1000</td>
-<td class="right">1000</td>
-<td class="right">24</td>
+<td class="left">`JOINT`</td>
+<td class="left">FINISH 4TH</td>
+<td class="left">FINISHED 1ST</td>
 <td class="right">2000</td>
-<td class="right">0</td>
-<td class="left">Finish 4th</td>
+<td class="left">Y (27 min)</td>
 </tr>
 
 <tr>
-<td class="left">JOINT CHOLESKY</td>
-<td class="right">4</td>
-<td class="right">1000</td>
-<td class="right">1000</td>
-<td class="right">24</td>
+<td class="left">`JOINT CHOLESKY`</td>
+<td class="left">FINISH 3RD</td>
+<td class="left">FINISHED 2ND</td>
 <td class="right">550</td>
-<td class="right">&#xa0;</td>
-<td class="left">Finish 3rd</td>
+<td class="left">N</td>
 </tr>
 
 <tr>
-<td class="left">ANALYTIC</td>
-<td class="right">4</td>
-<td class="right">1000</td>
-<td class="right">1000</td>
-<td class="right">24</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="left">Finish 2nd</td>
+<td class="left">`ANALYTIC`</td>
+<td class="left">FINISH 2ND</td>
+<td class="left">FINISHED 3RD</td>
+<td class="right">150</td>
+<td class="left">N</td>
 </tr>
 
 <tr>
-<td class="left">ANALYTIC CHOLESKY</td>
-<td class="right">4</td>
-<td class="right">1000</td>
-<td class="right">1000</td>
-<td class="right">24</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="left">Finish 1st</td>
+<td class="left">`ANALYTIC CHOLESKY`</td>
+<td class="left">FINISH 1ST</td>
+<td class="left">FINISHED 4TH</td>
+<td class="right">38</td>
+<td class="left">N</td>
 </tr>
 </tbody>
 </table>
