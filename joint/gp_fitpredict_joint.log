@@ -1,0 +1,98 @@
+In [1]: %time %run gp.py
+DIAGNOSTIC(S) FROM PARSER:
+Warning (non-fatal): Left-hand side of sampling statement (~) contains a non-linear transform of a parameter or local variable.
+ You must call increment_log_prob() with the log absolute determinant of the Jacobian of the transform.
+  Sampling Statement left-hand-side expression:
+    y ~ multi_normal_log(...)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL gp_fitpredict_joint_b1ff1ee8e5bf5fbc2283b2f59df94c40 NOW.
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 2)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 3)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 0)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 1)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 2)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 0)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 1)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 3)
+Iteration:  400 / 2000 [ 20%]  (Warmup) (Chain 2)
+Iteration:  400 / 2000 [ 20%]  (Warmup) (Chain 0)
+Iteration:  400 / 2000 [ 20%]  (Warmup) (Chain 1)
+Iteration:  400 / 2000 [ 20%]  (Warmup) (Chain 3)
+Iteration:  600 / 2000 [ 30%]  (Warmup) (Chain 2)
+Iteration:  600 / 2000 [ 30%]  (Warmup) (Chain 0)
+Iteration:  600 / 2000 [ 30%]  (Warmup) (Chain 1)
+Iteration:  600 / 2000 [ 30%]  (Warmup) (Chain 3)
+Iteration:  800 / 2000 [ 40%]  (Warmup) (Chain 2)
+Iteration:  800 / 2000 [ 40%]  (Warmup) (Chain 0)
+Iteration:  800 / 2000 [ 40%]  (Warmup) (Chain 1)
+Iteration:  800 / 2000 [ 40%]  (Warmup) (Chain 3)
+Iteration: 1000 / 2000 [ 50%]  (Warmup) (Chain 2)
+Iteration: 1001 / 2000 [ 50%]  (Sampling) (Chain 2)
+Iteration: 1000 / 2000 [ 50%]  (Warmup) (Chain 0)
+Iteration: 1001 / 2000 [ 50%]  (Sampling) (Chain 0)
+Iteration: 1000 / 2000 [ 50%]  (Warmup) (Chain 1)
+Iteration: 1001 / 2000 [ 50%]  (Sampling) (Chain 1)
+Iteration: 1000 / 2000 [ 50%]  (Warmup) (Chain 3)
+Iteration: 1001 / 2000 [ 50%]  (Sampling) (Chain 3)
+Iteration: 1200 / 2000 [ 60%]  (Sampling) (Chain 2)
+Iteration: 1200 / 2000 [ 60%]  (Sampling) (Chain 1)
+Iteration: 1200 / 2000 [ 60%]  (Sampling) (Chain 0)
+Iteration: 1400 / 2000 [ 70%]  (Sampling) (Chain 2)
+Iteration: 1200 / 2000 [ 60%]  (Sampling) (Chain 3)
+Iteration: 1400 / 2000 [ 70%]  (Sampling) (Chain 1)
+Iteration: 1400 / 2000 [ 70%]  (Sampling) (Chain 0)
+Iteration: 1600 / 2000 [ 80%]  (Sampling) (Chain 2)
+Iteration: 1400 / 2000 [ 70%]  (Sampling) (Chain 3)
+Iteration: 1600 / 2000 [ 80%]  (Sampling) (Chain 1)
+Iteration: 1600 / 2000 [ 80%]  (Sampling) (Chain 0)
+Iteration: 1800 / 2000 [ 90%]  (Sampling) (Chain 2)
+Iteration: 1600 / 2000 [ 80%]  (Sampling) (Chain 3)
+Iteration: 1800 / 2000 [ 90%]  (Sampling) (Chain 1)
+Iteration: 1800 / 2000 [ 90%]  (Sampling) (Chain 0)
+Iteration: 2000 / 2000 [100%]  (Sampling) (Chain 2)
+
+#  Elapsed Time: 949.83 seconds (Warm-up)
+#                499.2 seconds (Sampling)
+#                1449.03 seconds (Total)
+
+/global/homes/d/dgold/anaconda/lib/python2.7/multiprocessing/queues.py:390: UserWarning: Pickling fit objects is an experimental feature!
+The relevant StanModel instance must be pickled along with this fit object.
+When unpickling the StanModel must be unpickled first.
+  return send(obj)
+Iteration: 2000 / 2000 [100%]  (Sampling) (Chain 1)
+
+#  Elapsed Time: 995.37 seconds (Warm-up)
+#                497.2 seconds (Sampling)
+#                1492.57 seconds (Total)
+
+/global/homes/d/dgold/anaconda/lib/python2.7/multiprocessing/queues.py:390: UserWarning: Pickling fit objects is an experimental feature!
+The relevant StanModel instance must be pickled along with this fit object.
+When unpickling the StanModel must be unpickled first.
+  return send(obj)
+Iteration: 1800 / 2000 [ 90%]  (Sampling) (Chain 3)
+Iteration: 2000 / 2000 [100%]  (Sampling) (Chain 0)
+
+#  Elapsed Time: 991.77 seconds (Warm-up)
+#                555.62 seconds (Sampling)
+#                1547.39 seconds (Total)
+
+/global/homes/d/dgold/anaconda/lib/python2.7/multiprocessing/queues.py:390: UserWarning: Pickling fit objects is an experimental feature!
+The relevant StanModel instance must be pickled along with this fit object.
+When unpickling the StanModel must be unpickled first.
+  return send(obj)
+Iteration: 2000 / 2000 [100%]  (Sampling) (Chain 3)
+
+#  Elapsed Time: 1043.59 seconds (Warm-up)
+#                566.64 seconds (Sampling)
+#                1610.23 seconds (Total)
+
+/global/homes/d/dgold/anaconda/lib/python2.7/multiprocessing/queues.py:390: UserWarning: Pickling fit objects is an experimental feature!
+The relevant StanModel instance must be pickled along with this fit object.
+When unpickling the StanModel must be unpickled first.
+  return send(obj)
+/global/homes/d/dgold/anaconda/lib/python2.7/pickle.py:306: UserWarning: Pickling fit objects is an experimental feature!
+The relevant StanModel instance must be pickled along with this fit object.
+When unpickling the StanModel must be unpickled first.
+  rv = reduce(self.proto)
+CPU times: user 4.27 s, sys: 1.49 s, total: 5.76 s
+Wall time: 27min 57s

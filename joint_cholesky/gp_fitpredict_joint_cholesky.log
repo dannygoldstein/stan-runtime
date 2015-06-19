@@ -1,0 +1,25 @@
+In [1]: %time %run gp.py
+DIAGNOSTIC(S) FROM PARSER:
+Warning (non-fatal): Left-hand side of sampling statement (~) contains a non-linear transform of a parameter or local variable.
+ You must call increment_log_prob() with the log absolute determinant of the Jacobian of the transform.
+  Sampling Statement left-hand-side expression:
+    y ~ multi_normal_cholesky_log(...)
+
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL gp_fitpredict_joint_cholesky_45a38d44c7949dbc73c0aae75ce9fb14 NOW.
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 0)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 2)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 3)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 1)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 1)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 2)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 3)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 0)
+Iteration:  400 / 2000 [ 20%]  (Warmup) (Chain 1)
+Iteration:  400 / 2000 [ 20%]  (Warmup) (Chain 2)
+Iteration:  400 / 2000 [ 20%]  (Warmup) (Chain 3)
+Iteration:  400 / 2000 [ 20%]  (Warmup) (Chain 0)
+Iteration:  600 / 2000 [ 30%]  (Warmup) (Chain 1)
+Iteration:  600 / 2000 [ 30%]  (Warmup) (Chain 2)
+Iteration:  600 / 2000 [ 30%]  (Warmup) (Chain 3)
+=>> PBS: job killed: walltime 1839 exceeded limit 1800
+Terminated

@@ -1,0 +1,11 @@
+In [1]: %time %run gp.py
+INFO:pystan:COMPILING THE C++ CODE FOR MODEL gp_fitpredict_analytic_8425b8047482b3820fc8cfd88b6e33ad NOW.
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 2)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 0)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 3)
+Iteration:    1 / 2000 [  0%]  (Warmup) (Chain 1)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 1)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 2)
+Iteration:  200 / 2000 [ 10%]  (Warmup) (Chain 3)
+=>> PBS: job killed: walltime 1806 exceeded limit 1800
+Terminated
