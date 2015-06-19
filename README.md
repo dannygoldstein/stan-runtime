@@ -1,0 +1,1 @@
+![problem description](toy_problem.png)
