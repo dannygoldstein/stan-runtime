@@ -1,5 +1,4 @@
-## STAN Runtime Test: Hierarchical Gaussian Process Hyperparameter
-   Fitting and Posterior Realization in 2D
+## STAN Runtime Test: Hierarchical Gaussian Process Hyperparameter Fitting and Posterior Realization in 2D
 
 <p align="center">
   <img src="static/space.gif">
